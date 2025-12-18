@@ -28,7 +28,6 @@ func (p *poller) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 	case tickMsg:
 		p.count++
-		return p, poll(p)
 	case finishedMsg:
 		return p, tea.Quit
 	}
